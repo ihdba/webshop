@@ -1,0 +1,60 @@
+
+
+virtualenv -p python3 <desired-path>
+
+source <desired-path>/bin/activate
+
+pip3 install django
+
+django-admin startproject name [directory]¶
+
+
+pip3 install mysqlclient
+
+DROP DATABASE IF EXISTS uniflow;
+
+DROP USER 'admin'@'localhost';
+
+CREATE DATABASE epihartou;
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+
+GRANT ALL PRIVILEGES ON epihartou.* TO 'admin'@'localhost';
+
+mysql -u admin -p
+admin
+
+
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'epihartou',
+    'HOST': '127.0.0.1',
+    'PORT': '3306',
+    'USER': 'admin',
+    'PASSWORD': 'admin',
+}}
+
+
+
+
+The ROOT of django project is where manage.py is
+
+src is the ROOT
+
+BASE_DIR is where manage.py is -- that is the ROOT dir (?)
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://chronos:chronos@localhost/chronos'
+
+
+
+-- on database management
+
+SELECT user FROM mysql.user GROUP BY user;
+
+DELETE FROM mysql.user WHERE user = 'username';
+
+
+https://boka-no.unilabs.com
+Fødselsdato: DDMMÅÅXXXXX Passord: NORSKI0008661380

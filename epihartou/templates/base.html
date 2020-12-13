@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Επι Χαρτου | {{ title }}</title>
+    <link rel="stylesheet" href="{% static 'css/epihartou.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            {% block navbar %}
+            {% endblock navbar %}
+        </div>
+        <div class="main">
+            {% block main %}
+            {% endblock main %}
+        </div>
+        
+    </div>
+    
+</body>
+</html>
